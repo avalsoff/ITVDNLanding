@@ -69,6 +69,18 @@ gulp.task('imagemin', function() {
   .pipe(gulp.dest('build/img')); 
 });
 
+gulp.task('sprite', function(cb) {
+  const spriteData = gulp.src('src/img/icons/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    imgPath: '../img/sprite.png',
+    cssName: 'sprite.sass'
+  }));
+
+  spriteData.img.pipe(gulp.dest('build/img/'));
+  spriteData.css.pipe(gulp.dest('src/styles/global/'));
+  cb();
+});
+
 gulp.task('build', ['removebuild', 'imagemin', 'pug', 'sass', 'js'], function() {
 
   var buildFiles = gulp.src([
