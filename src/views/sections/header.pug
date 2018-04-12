@@ -1,7 +1,9 @@
 header.header
   .header__top
     .container
-      .contacts
-        a.contact(href="tel:+3806499999") lolkek
-        
-  .header__bottom
+      include contacts
+  .container
+    .header__bottom
+      a.logo(href="#"): img.logo__picture(src="img/logo.png" alt="picture")
+      include nav
+      a.button.header__button.button--red(href="#") Free Consultation

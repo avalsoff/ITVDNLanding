@@ -46,7 +46,7 @@ gulp.task('index-js', function() {
 
 gulp.task('js', ['index-js'], function() {
   return gulp.src([
-    'src/libs/jquery/dist/jquery.min.js',
+    // 'src/libs/jquery/dist/jquery.min.js',
     'src/js/index.min.js', // Always at the end
     ])
   .pipe(concat('scripts.min.js'))
@@ -56,7 +56,7 @@ gulp.task('js', ['index-js'], function() {
 });
 
 gulp.task('pug', function() {
-  return gulp.src('src/views/**/!(_)*.pug')
+  return gulp.src('src/views/!(_)*.pug')
   .pipe(pug({
     pretty: true
   }).on("error", notify.onError()))
