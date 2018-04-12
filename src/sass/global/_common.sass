@@ -1,0 +1,25 @@
+.container
+  max-width: 1024px;
+  margin: auto
+
+.button
+  display: inline-block
+  border-radius: 3px
+  padding: 10px 22px 7px
+  text-decoration: none
+  color: #fff
+
+  &--red
+    background-color: $accent
+    transition: .3s
+    &:hover
+      background-color: lighten($accent, 7%)
+
+  &--yellow
+    background-color: #f8cd53
+    &:hover
+      background-color: lighten(#f8cd53, 7%)
+
+  &--uppercase
+    text-transform: uppercase
+
