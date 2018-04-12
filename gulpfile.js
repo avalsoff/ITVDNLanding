@@ -11,6 +11,7 @@ const pug           = require('gulp-pug');
 const imagemin      = require('gulp-imagemin');
 const del           = require('del');
 const cache         = require('gulp-cache');
+const spritesmith = require('gulp.spritesmith');
 
 gulp.task('browser-sync', function() {
   browsersync({
@@ -58,7 +59,7 @@ gulp.task('pug', function() {
   return gulp.src('src/views/**/!(_)*.pug')
   .pipe(pug({
     pretty: true
-  }))
+  }).on("error", notify.onError()))
   .pipe(gulp.dest('src'))
   .pipe(browsersync.reload( {stream: true} ))
 });
