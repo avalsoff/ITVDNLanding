@@ -1,0 +1,93 @@
+.form-section
+  padding: 100px 0 110px
+  color: #fff
+  background-color: #1287bf
+
+  .title
+    margin-bottom: 12px
+
+    &__header
+      font-size: 2.5rem
+
+    &__text
+      font-size: 1.5rem
+
+  .btn-down
+    position: relative
+    margin: auto auto 20px
+    width: 65px
+    height: 65px
+    border: 2px solid #fff
+    border-radius: 50%    
+    line-height: 65px
+    text-align: center
+    font-size: 1.7rem
+
+.form
+  position: relative
+  width: 67%
+  margin: auto
+  padding 50px 50px 66px
+  border-radius: 3px
+  color: #828282
+  text-align: center
+  background-color: #fff
+  
+  &-container
+    padding-top: 30px
+
+  &::before
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    content: ''
+    border: 30px solid transparent
+    border-bottom: 30px solid #fff
+    top: -59px
+
+  &__close-button
+    cursor: pointer
+    position: absolute
+    right: -16px
+    top: -22px
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    border: 2px solid #fff
+    line-height: 46px
+    text-align: center
+    font-size: 1.5rem
+    color: #fff
+    background: $accent
+    transition: .3s
+
+    &:hover
+      background-color: lighten($accent, 10%)
+
+  &__text
+    margin-bottom: 33px
+    font-size: 1.2rem
+    line-height: 1.5
+
+  &__fields
+    margin-bottom: 36px
+
+  &__input
+    width: 76%
+    display: block
+    margin: auto auto 8px
+    padding: 18px 20px
+    border: 1px solid #d8d8d8
+    border-radius: 3px
+    font-size: 1rem
+
+    &:focus
+      box-shadow: 0 0 8px 1px rgba(#1287bf, .8)
+
+
+  .button
+    padding: 15px 30px
+    border: none
+
+
+
